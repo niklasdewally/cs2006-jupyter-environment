@@ -36,7 +36,7 @@ brew unlink python
 brew link python@3.9
 ```
 
-## Modifying the environment
+## Modifying the environment
 
 - To save any `pip` installed packages (for example, to sync to your own version of this repo),
 use the `save-env.sh` script.
