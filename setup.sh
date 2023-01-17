@@ -15,13 +15,14 @@ fi
 # Setup venv in directory of script
 
 DIR=$(dirname -- "$0")
+cd $DIR
 
 echo "-- Setting up virtual enviroment in $DIR"
-python3 -m venv "$DIR"
+python3 -m venv .
 
 echo "-- Installing packages from requirements.txt"
 
-. "$DIR/bin/activate"
+. "bin/activate"
 pip3 install -r requirements.txt
 
 
