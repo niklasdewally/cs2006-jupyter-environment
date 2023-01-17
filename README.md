@@ -15,7 +15,7 @@ git clone https://github.com/niklasdewally/cs2006-jupyter-environment cs2006-ven
 ./cs2006-venv/setup.sh
 
 # activate the virtual environment
-./cs2006-venv/bin/activate
+source ./cs2006-venv/bin/activate
 
 # deactivate the virtual enviroment when done
 deactivate
