@@ -1,5 +1,5 @@
 # cs2006-jupyter-environment
-A base environment (and bootstrap scripts) for running Jupyter for CS2006.
+A base environment (and bootstrap scripts) for CS2006, including Jupyter.
 
 The Jupyter plugins and python packages installed in this environment are those listed in the
 [CS2006 Python Readme](https://studres.cs.st-andrews.ac.uk/CS2006/Lectures/Python/README.md).
