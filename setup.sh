@@ -33,4 +33,11 @@ jupyter nbextension enable --py widgetsnbextension
 jupyter nbextension install rise --user --py
 jupyter nbextension enable rise --user --py
 
+# Enable nbdime
+# https://nbdime.readthedocs.io/en/latest/extensions.html
+jupyter serverextension enable --py nbdime --sys-prefix
+jupyter nbextension install --py nbdime --sys-prefix
+jupyter nbextension enable --py nbdime --sys-prefix
+jupyter labextension install nbdime-jupyterlab
+
 echo "-- Enviroment installed successfully!"
