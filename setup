@@ -16,11 +16,11 @@ nb_contrib_extensions = ["zenmode/main",
 
 VENV_DIR = pathlib.Path(__file__).absolute().parent
 
-def venv_run(command):
+def venv_call(command):
     """
-    Run the given command in the virtual enviroment.
+    Call the given command in the virtual enviroment.
     """
-    return subprocess.run(f"source {str(VENV_DIR)}/bin/activate;{command}",shell=True);
+    return subprocess.check_call(f"source {str(VENV_DIR)}/bin/activate;{command}",shell=True);
 
 def setup_nb_pip_extensions(extensions):
     for extension in extensions:
@@ -28,26 +28,25 @@ def setup_nb_pip_extensions(extensions):
         _enable_nb_extension(extension,py=True)
 
 def setup_nb_contrib_extensions(extensions):
-    venv_run("pip install jupyter_contrib_nbextensions")
-    venv_run("jupyter contrib nbextension install --sys-prefix")
+    venv_call("pip install jupyter_contrib_nbextensions")
+    venv_call("jupyter contrib nbextension install --sys-prefix")
     for extension in extensions:
-        _install_nb_extension(extension,py=False)
         _enable_nb_extension(extension,py=False)
 
 def setup_nb_server_extensions(extensions):
     for extension in extensions:
-        venv_run(f'jupyter nbextension install {extension} --py --sys-prefix')
-        venv_run(f'jupyter serverextension enable {extension} --py --sys-prefix')
+        venv_call(f'jupyter nbextension install {extension} --py --sys-prefix')
+        venv_call(f'jupyter serverextension enable {extension} --py --sys-prefix')
 
 def _install_nb_extension(extension,py=True):
-    return venv_run(f'jupyter nbextension install {extension} {"--py" if py else ""} --sys-prefix')
+    return venv_call(f'jupyter nbextension install {extension} {"--py" if py else ""} --sys-prefix')
 
 def _enable_nb_extension(extension,py=True):
-    return venv_run(f'jupyter nbextension enable {extension} {"--py" if py else ""} --sys-prefix')
+    return venv_call(f'jupyter nbextension enable {extension} {"--py" if py else ""} --sys-prefix')
 
 
 subprocess.run(f"python3 -m venv {str(VENV_DIR)}",shell=True)
-venv_run(f"pip install -r requirements.txt")
+venv_call(f"pip install -r requirements.txt")
 
 setup_nb_pip_extensions(nb_pip_extensions)
 setup_nb_server_extensions(server_pip_extensions)
