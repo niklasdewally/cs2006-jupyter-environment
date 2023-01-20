@@ -11,7 +11,10 @@ server_pip_extensions = ["nbdime"]
 # https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions.html
 nb_contrib_extensions = ["zenmode/main",
                          "code_prettify/autopep8",
-                         "code_font_size/code_font_size"
+                         "code_font_size/code_font_size",
+                         "spellchecker/main",
+                         "qtconsole/qtconsole",
+                         "codefolding/main"
                          ]
 
 VENV_DIR = pathlib.Path(__file__).absolute().parent
