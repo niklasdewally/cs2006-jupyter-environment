@@ -5,6 +5,7 @@ argon2-cffi-bindings==21.2.0
 arrow==1.2.3
 asttokens==2.2.1
 attrs==22.2.0
+autopep8==2.0.1
 Babel==2.11.0
 backcall==0.2.0
 beautifulsoup4==4.11.1
@@ -83,6 +84,7 @@ protobuf==4.21.12
 psutil==5.9.4
 ptyprocess==0.7.0
 pure-eval==0.2.2
+pycodestyle==2.10.0
 pycparser==2.21
 Pygments==2.14.0
 pyparsing==3.0.9

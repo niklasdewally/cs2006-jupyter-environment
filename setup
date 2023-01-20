@@ -2,11 +2,17 @@
 import os,pathlib,sys,subprocess
 
 
-nb_pip_extensions = ["widgetsnbextension","rise","nbdime"]
+nb_pip_extensions = ["widgetsnbextension",
+                     "rise",
+                     "nbdime"]
+
 server_pip_extensions = ["nbdime"]
 
 # https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions.html
-nb_contrib_extensions = []
+nb_contrib_extensions = ["zenmode/main",
+                         "code_prettify/autopep8",
+                         "code_font_size/code_font_size"
+                         ]
 
 VENV_DIR = pathlib.Path(__file__).absolute().parent
 
@@ -22,6 +28,7 @@ def setup_nb_pip_extensions(extensions):
         _enable_nb_extension(extension,py=True)
 
 def setup_nb_contrib_extensions(extensions):
+    venv_run("pip install jupyter_contrib_nbextensions")
     venv_run("jupyter contrib nbextension install --sys-prefix")
     for extension in extensions:
         _install_nb_extension(extension,py=False)
