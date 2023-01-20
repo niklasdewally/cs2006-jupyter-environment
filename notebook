@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# activate env
+. "$(dirname -- $0)/bin/activate"
+
+# run notebook
+jupyter notebook
+
+
