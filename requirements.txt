@@ -78,6 +78,7 @@ pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==9.4.0
 platformdirs==2.6.2
+ply==3.11
 prometheus-client==0.15.0
 prompt-toolkit==3.0.36
 protobuf==4.21.12
@@ -88,7 +89,14 @@ pycodestyle==2.10.0
 pycparser==2.21
 Pygments==2.14.0
 pyparsing==3.0.9
+PyQt5-sip==12.11.0
+PyQt6==6.4.0
+PyQt6-Qt6==6.4.2
+PyQt6-sip==13.4.0
 pyrsistent==0.19.3
+PySide6==6.4.2
+PySide6-Addons==6.4.2
+PySide6-Essentials==6.4.2
 python-dateutil==2.8.2
 python-json-logger==2.0.4
 pytz==2022.7.1
@@ -101,6 +109,8 @@ rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
 rise==5.7.1
 Send2Trash==1.8.0
+shiboken6==6.4.2
+sip==6.7.5
 six==1.16.0
 smmap==5.0.0
 sniffio==1.3.0
@@ -109,6 +119,7 @@ stack-data==0.6.2
 sympy==1.11.1
 terminado==0.17.1
 tinycss2==1.2.1
+toml==0.10.2
 tomli==2.0.1
 tornado==6.2
 traitlets==5.8.1
